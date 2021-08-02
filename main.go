@@ -55,7 +55,7 @@ func main() {
 				fmt.Println(err)
 				return
 			} else {
-				fmt.Fprintf(file, "type \t%s\t{\n", tableName)
+				fmt.Fprintf(file, "type \t%s struct \t{\n", tableName)
 				for _, column := range columns {
 
 					fmt.Fprintf(file, "\t%s \t%s\n", column.Name(), types[column.DatabaseTypeName()])
